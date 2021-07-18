@@ -1,9 +1,6 @@
 # UxPlay
 
-This project is an early stage prototype of unix AirPlay server.
-Work is based on https://github.com/FD-/RPiPlay.
-Tested on Ubuntu 19.10 desktop.
-5G Wifi connection is the must.
+Fork of [UxPlay](https://github.com/antimof/UxPlay)
 
 ## Features
 1. Based on Gstreamer.
@@ -17,7 +14,10 @@ sudo apt-get install cmake
 sudo apt-get install libssl-dev libavahi-compat-libdnssd-dev \
                      libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
                      gstreamer1.0-libav gstreamer1.0-plugins-bad
+
 sudo apt-get install gstreamer1.0-vaapi # For Intel graphics
+# (UxPlay crashes if you dont have Intel graphics, but installed it)
+
 mkdir build
 cd build
 cmake ..
@@ -25,4 +25,6 @@ cmake ..
 # cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=path/to/install/dir
 make
 ```
+
+As a work around for sharing the uxplay window from a browser you can manually set the title using `xdotool selectwindow set_window --name "ux"` (and selecting the window by clicking).
 
