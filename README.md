@@ -26,5 +26,10 @@ cmake ..
 make
 ```
 
+## Start
+```bash
+AVAHI_COMPAT_NOWARN=1 ./uxplay
+```
+
 As a work around for sharing the uxplay window from a browser you can manually set the title using `xdotool selectwindow set_window --name "ux"` (and selecting the window by clicking).
 
